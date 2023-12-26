@@ -58,6 +58,32 @@ namespace ParkingLotManagement
         }
 
         
+        private void ExitButtonClick(object sender, EventArgs e)
+        {
+
+            string plate = plateTextBox.Text;
+
+            if (plate.Trim() == "" || plate.Length <= 5)
+            {
+                MessageBox.Show("Please fill the form!");
+            }
+            else
+            {
+                bool saveResult = ExitTheCarFromDatabase(plate);
+                if (saveResult)
+                {
+                    ResetForm();
+                    MessageBox.Show("Succesfully Exit!");
+                }
+                else
+                {
+                    MessageBox.Show("Car not saved!");
+                }
+            }
+
+        }
+
+        
         private bool SaveTheCarToDatabase(string plate, string floor)
         {
 
@@ -71,6 +97,25 @@ namespace ParkingLotManagement
                     command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.Parameters.Add("date", DbType.String).Value = now;
                     command.Parameters.Add("floor", DbType.String).Value = floor;
+                    command.ExecuteNonQuery();
+
+                    return true;
+                }
+            }
+
+        }
+
+
+        private bool ExitTheCarFromDatabase(string plate)
+        {
+
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "UPDATE parkinglot SET plate = NULL, date = NULL, occupied = 0 WHERE plate = :plate";
+                    command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.ExecuteNonQuery();
 
                     return true;
@@ -115,6 +160,11 @@ namespace ParkingLotManagement
                 return "";
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

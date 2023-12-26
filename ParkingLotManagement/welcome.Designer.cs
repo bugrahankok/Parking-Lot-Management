@@ -41,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.plateTextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
+            this.exit_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,12 @@
             this.enter_btn.Location = new System.Drawing.Point(40, 252);
             this.enter_btn.Margin = new System.Windows.Forms.Padding(2);
             this.enter_btn.Name = "enter_btn";
-            this.enter_btn.Size = new System.Drawing.Size(202, 38);
+            this.enter_btn.Size = new System.Drawing.Size(95, 38);
             this.enter_btn.TabIndex = 1;
             this.enter_btn.Text = "Enter";
             this.enter_btn.UseVisualStyleBackColor = false;
             this.enter_btn.Click += new System.EventHandler(this.EnterButtonClick);
+            this.exit_btn.Click += new System.EventHandler(this.ExitButtonClick);
             // 
             // label1
             // 
@@ -192,6 +194,20 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButtonClick);
             // 
+            // exit_btn
+            // 
+            this.exit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit_btn.Location = new System.Drawing.Point(149, 252);
+            this.exit_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(95, 38);
+            this.exit_btn.TabIndex = 14;
+            this.exit_btn.Text = "Exit";
+            this.exit_btn.UseVisualStyleBackColor = false;
+            this.exit_btn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // welcome
             // 
             this.AllowDrop = true;
@@ -200,6 +216,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(589, 329);
             this.ControlBox = false;
+            this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.plateTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -229,6 +246,7 @@
 
         #endregion
         private System.Windows.Forms.Button enter_btn;
+        private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
