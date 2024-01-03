@@ -2,13 +2,14 @@
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Data;
+using System.Diagnostics;
 
 
 namespace ParkingLotManagement
 {
     public partial class welcome : Form
     {
-
+        public string title = "Zloty Car Park";
         public welcome()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace ParkingLotManagement
          
             if (plate.Trim() == "" || plate.Length <= 5 || floor == "")  
             {
-                MessageBox.Show("Please fill the form!");
+                MessageBox.Show("Please fill the form!",title);
             }
             else
             {
@@ -47,11 +48,11 @@ namespace ParkingLotManagement
                 if (saveResult)
                 {
                     ResetForm();
-                    MessageBox.Show("Car saved!");
+                    MessageBox.Show("Car saved!", title);
                 }
                 else
                 {
-                    MessageBox.Show("Car not saved!");
+                    MessageBox.Show("Car not saved!", title);
                 }
             }
 
@@ -62,10 +63,11 @@ namespace ParkingLotManagement
         {
 
             string plate = plateTextBox.Text;
+            CalculatePrice(plate);
 
             if (plate.Trim() == "" || plate.Length <= 5)
             {
-                MessageBox.Show("Please fill the form!");
+                MessageBox.Show("Please fill the form!", title);
             }
             else
             {
@@ -73,11 +75,11 @@ namespace ParkingLotManagement
                 if (saveResult)
                 {
                     ResetForm();
-                    MessageBox.Show("Succesfully Exit!");
+                    MessageBox.Show("Succesfully Exit!", title);
                 }
                 else
                 {
-                    MessageBox.Show("Car not saved!");
+                    MessageBox.Show("Car not saved!", title);
                 }
             }
 
@@ -133,7 +135,64 @@ namespace ParkingLotManagement
             purpleFloorRadioButton.Checked = false;
         }
 
-
+        private void CalculatePrice(string plate)
+        {
+            
+            string usrDate = "";
+            
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.connectionString))
+            {
+                connection.Open();
+                string query = @"SELECT date,floor FROM parkinglot WHERE plate = :plate";
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                cmd.Parameters.Add("plate", DbType.String).Value= plate;
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                 string floor = rd[1].ToString();
+                 usrDate = rd[0].ToString();
+                 usrDate = usrDate.Substring(0, usrDate.Length - 3);
+                    try
+                    {
+                        DateTime targetDateTime = DateTime.ParseExact(usrDate, "MM/dd/yyyy H:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                        DateTime now = DateTime.Now;
+                        TimeSpan diffrence = now - targetDateTime;
+                        if (diffrence.Days > 0)
+                        {
+                            MessageBox.Show("Your plate has been blocked for exceeding 24-hour time period. Please contact with supervisor!");
+                        }
+                        else
+                        {
+                            int hours = diffrence.Hours;
+                            if (floor == "Blue")
+                            {
+                                int price = hours * 5;
+                                MessageBox.Show($"Price: {price}", title);
+                            }
+                            else if (floor == "Yellow")
+                            {
+                                int price = hours * 3;
+                                MessageBox.Show($"Price: {price}", title);
+                            }
+                            else if (floor == "Purple")
+                            {
+                                int price = hours * 4;
+                                MessageBox.Show($"Price: {price}", title);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error", title);
+                            }
+                        }
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("Error", title);
+                    }
+                }
+                
+            }
+        }
         private string GetSelectedFloorName()
         {
             if (blueFloorRadioButton.Checked)

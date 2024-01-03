@@ -7,12 +7,12 @@ namespace ParkingLotManagement
 {
     public partial class admin_login : Form
     {
-        
+        public string title = "Zloty Car Park";
         public admin_login()
         {
             InitializeComponent();
         }
-
+        
         private void LoginButtonClick(object sender, EventArgs e)
         {
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.connectionString))
@@ -39,7 +39,7 @@ namespace ParkingLotManagement
 
                 else
                 {
-                    MessageBox.Show("Invalid username or password!","Error");
+                    MessageBox.Show("Invalid username or password!",title);
                 }
 
                 conn.Close();

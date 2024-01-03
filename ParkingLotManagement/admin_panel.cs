@@ -7,7 +7,7 @@ namespace ParkingLotManagement
 {
     public partial class admin_panel : Form
     {
-
+        public string title = "Zloty Car Park";
         public admin_panel()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace ParkingLotManagement
                     }
                     else
                     {
-                        Console.WriteLine("error");
+                        Console.WriteLine("Error",title);
                     }
                 }
             }
