@@ -44,5 +44,5 @@ C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\De
 C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.GenerateResource.cache
 C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.CoreCompileInputs.cache
 C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.CopyComplete
-C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\Debug\ParkingLotManagement.form1.resources
 C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\Debug\ParkingLotManagement.admin_login.resources
+C:\Users\bugra\OneDrive\Desktop\ParkingLotManagement\ParkingLotManagement\obj\Debug\ParkingLotManagement.welcome.resources
