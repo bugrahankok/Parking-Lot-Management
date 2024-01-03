@@ -63,25 +63,28 @@ namespace ParkingLotManagement
         {
 
             string plate = plateTextBox.Text;
-            CalculatePrice(plate);
 
-            if (plate.Trim() == "" || plate.Length <= 5)
-            {
-                MessageBox.Show("Please fill the form!", title);
-            }
-            else
-            {
-                bool saveResult = ExitTheCarFromDatabase(plate);
-                if (saveResult)
+                if (plate.Trim() == "" || plate.Length <= 5)
                 {
-                    ResetForm();
-                    MessageBox.Show("Succesfully Exit!", title);
+                    MessageBox.Show("Please fill the form!", title);
                 }
                 else
                 {
-                    MessageBox.Show("Car not saved!", title);
+                    bool result = CalculatePrice(plate);
+                    if(result == true)
+                    {
+                      bool saveResult = ExitTheCarFromDatabase(plate);
+                      if (saveResult)
+                      {
+                          ResetForm();
+                          MessageBox.Show("Succesfully Exit!", title);
+                      }
+                      else
+                      {
+                        MessageBox.Show("Car not saved!", title);
+                      }
+                    }
                 }
-            }
 
         }
 
@@ -135,13 +138,14 @@ namespace ParkingLotManagement
             purpleFloorRadioButton.Checked = false;
         }
 
-        private void CalculatePrice(string plate)
+        private bool CalculatePrice(string plate)
         {
             
-            string usrDate = "";
+            
             
             using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.connectionString))
             {
+                string usrDate = "";
                 connection.Open();
                 string query = @"SELECT date,floor FROM parkinglot WHERE plate = :plate";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
@@ -160,6 +164,7 @@ namespace ParkingLotManagement
                         if (diffrence.Days > 0)
                         {
                             MessageBox.Show("Your plate has been blocked for exceeding 24-hour time period. Please contact with supervisor!");
+                            return false;
                         }
                         else
                         {
@@ -168,30 +173,37 @@ namespace ParkingLotManagement
                             {
                                 int price = hours * 5;
                                 MessageBox.Show($"Price: {price}", title);
+                                
                             }
                             else if (floor == "Yellow")
                             {
                                 int price = hours * 3;
                                 MessageBox.Show($"Price: {price}", title);
+                               
                             }
                             else if (floor == "Purple")
                             {
                                 int price = hours * 4;
                                 MessageBox.Show($"Price: {price}", title);
+                                
                             }
                             else
                             {
                                 MessageBox.Show("Error", title);
+                                break;
                             }
+                            
                         }
                     }
                     catch 
                     {
                         MessageBox.Show("Error", title);
+                        return false;
                     }
                 }
                 
             }
+            return true;
         }
         private string GetSelectedFloorName()
         {
