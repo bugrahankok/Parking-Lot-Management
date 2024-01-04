@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Data;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 
 namespace ParkingLotManagement
@@ -147,7 +148,7 @@ namespace ParkingLotManagement
             {
                 string usrDate = "";
                 connection.Open();
-                string query = @"SELECT date,floor FROM parkinglot WHERE plate = :plate";
+                string query = @"SELECT date,floor,plate FROM parkinglot WHERE plate = :plate";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
                 cmd.Parameters.Add("plate", DbType.String).Value= plate;
                 SQLiteDataReader rd = cmd.ExecuteReader();
@@ -164,6 +165,9 @@ namespace ParkingLotManagement
                         if (diffrence.Days > 0)
                         {
                             MessageBox.Show("Your plate has been blocked for exceeding 24-hour time period. Please contact with supervisor!");
+                            int hours = diffrence.Hours;
+                            int price = hours * 5;
+                            GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
                             return false;
                         }
                         else
@@ -173,19 +177,22 @@ namespace ParkingLotManagement
                             {
                                 int price = hours * 5;
                                 MessageBox.Show($"Price: {price}", title);
-                                
+                                GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
+
                             }
                             else if (floor == "Yellow")
                             {
                                 int price = hours * 3;
                                 MessageBox.Show($"Price: {price}", title);
+                                GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
                                
                             }
                             else if (floor == "Purple")
                             {
                                 int price = hours * 4;
                                 MessageBox.Show($"Price: {price}", title);
-                                
+                                GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
+
                             }
                             else
                             {
@@ -232,7 +239,17 @@ namespace ParkingLotManagement
 
             }
         }
+        private void GetInformation(string hours, string price, string date, string plate)
+        {
+            List<string> data = new List<string>();
+            data.Add(hours);
+            data.Add(price);
+            data.Add(date);
+            data.Add(plate);
+            ReceiptForm receiptForm = new ReceiptForm(data);
+            receiptForm.Show();
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 

@@ -94,3 +94,4 @@ C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotMan
 C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.CopyComplete
 C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.exe
 C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.pdb
+C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ReceiptForm.resources
