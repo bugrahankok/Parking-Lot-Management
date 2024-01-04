@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace ParkingLotManagement
 {
-    public partial class admin_login : Form
+    public partial class AdminLogin : Form
     {
-        public admin_login()
+        public AdminLogin()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace ParkingLotManagement
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    admin_panel adminWindow = new admin_panel();
+                    ParkingLots adminWindow = new ParkingLots();
                     adminWindow.Show();
                     this.Close();
                 }

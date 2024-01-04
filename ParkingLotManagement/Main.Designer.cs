@@ -1,6 +1,6 @@
 ﻿namespace ParkingLotManagement
 {
-    partial class welcome
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,6 @@
             this.enter_btn.Text = "Enter";
             this.enter_btn.UseVisualStyleBackColor = false;
             this.enter_btn.Click += new System.EventHandler(this.EnterButtonClick);
-            this.exit_btn.Click += new System.EventHandler(this.ExitButtonClick);
             // 
             // label1
             // 
@@ -206,8 +205,9 @@
             this.exit_btn.TabIndex = 14;
             this.exit_btn.Text = "Exit";
             this.exit_btn.UseVisualStyleBackColor = false;
+            this.exit_btn.Click += new System.EventHandler(this.ExitButtonClick);
             // 
-            // welcome
+            // Main
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -233,10 +233,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "welcome";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

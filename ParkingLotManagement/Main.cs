@@ -7,9 +7,9 @@ using System.Collections.Generic;
 
 namespace ParkingLotManagement
 {
-    public partial class welcome : Form
+    public partial class Main : Form
     {
-        public welcome()
+        public Main()
         {
             InitializeComponent();
         }
@@ -21,15 +21,10 @@ namespace ParkingLotManagement
 
         private void AdminLoginClick(object sender, EventArgs e)
         {
-            admin_login adminLogin = new admin_login();
+            AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
         }
 
-        private void form1_Load(object sender, EventArgs e)
-        {
-            admin_login adminLogin = new admin_login();
-            adminLogin.Hide();
-        }
 
         private void EnterButtonClick(object sender, EventArgs e)
         {

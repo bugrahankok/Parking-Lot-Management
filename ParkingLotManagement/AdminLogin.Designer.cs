@@ -1,6 +1,6 @@
 ﻿namespace ParkingLotManagement
 {
-    partial class admin_login
+    partial class AdminLogin
     {
         /// <summary>
         /// Required designer variable.

@@ -83,17 +83,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin_login.cs">
+    <Compile Include="AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_login.Designer.cs">
-      <DependentUpon>admin_login.cs</DependentUpon>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="admin_panel.cs">
+    <Compile Include="ParkingLots.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_panel.Designer.cs">
-      <DependentUpon>admin_panel.cs</DependentUpon>
+    <Compile Include="ParkingLots.Designer.cs">
+      <DependentUpon>ParkingLots.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalConstants.cs" />
     <Compile Include="HourCalculator.cs" />
@@ -105,25 +105,25 @@
     <Compile Include="ReceiptForm.Designer.cs">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="welcome.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="welcome.Designer.cs">
-      <DependentUpon>welcome.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="admin_login.resx">
-      <DependentUpon>admin_login.cs</DependentUpon>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin_panel.resx">
-      <DependentUpon>admin_panel.cs</DependentUpon>
+    <EmbeddedResource Include="ParkingLots.resx">
+      <DependentUpon>ParkingLots.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="welcome.resx">
-      <DependentUpon>welcome.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

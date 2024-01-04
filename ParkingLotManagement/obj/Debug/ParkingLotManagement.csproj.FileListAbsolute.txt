@@ -96,3 +96,6 @@ C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotMan
 C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.pdb
 C:\Users\istemihan\Source\Repos\bugrahankok\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ReceiptForm.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ReceiptForm.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.AdminMain.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ParkingLots.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.Main.resources

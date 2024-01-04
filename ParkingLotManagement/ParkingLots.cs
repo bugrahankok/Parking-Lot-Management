@@ -7,9 +7,9 @@ using System.Collections.Generic;
 
 namespace ParkingLotManagement
 {
-    public partial class admin_panel : Form
+    public partial class ParkingLots : Form
     {
-        public admin_panel()
+        public ParkingLots()
         {
             InitializeComponent();
             UpdateSlots();
@@ -39,7 +39,7 @@ namespace ParkingLotManagement
                         targetSpot.Enabled = true;
                         targetSpot.BackColor = Color.DarkRed;
                         targetSpot.ForeColor = Color.White;
-                        targetSpot.Text = plate +":"+ "\n" +":"+ date;
+                        targetSpot.Text = plate + "\n" + date;
 
                     }
                     else
