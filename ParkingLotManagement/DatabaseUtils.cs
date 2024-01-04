@@ -2,7 +2,7 @@
 {
     internal static class DatabaseUtils
     {
-        public static string databasePath = "parklotdata.db";
-        public static string connectionString = $"Data Source={databasePath};Version=3;";
+        public static string DATABASE_PATH = "parklotdata.db";
+        public static string CONNECTION_STRING = $"Data Source={DATABASE_PATH};Version=3;";
     }
 }

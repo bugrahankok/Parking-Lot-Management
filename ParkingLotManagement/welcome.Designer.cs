@@ -206,7 +206,6 @@
             this.exit_btn.TabIndex = 14;
             this.exit_btn.Text = "Exit";
             this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // welcome
             // 

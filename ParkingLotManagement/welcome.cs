@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Data;
-using System.Diagnostics;
 using System.Collections.Generic;
 
 
@@ -10,7 +9,6 @@ namespace ParkingLotManagement
 {
     public partial class welcome : Form
     {
-        public string title = "Zloty Car Park";
         public welcome()
         {
             InitializeComponent();
@@ -41,7 +39,7 @@ namespace ParkingLotManagement
          
             if (plate.Trim() == "" || plate.Length <= 5 || floor == "")  
             {
-                MessageBox.Show("Please fill the form!",title);
+                MessageBox.Show("Please fill the form!", GlobalConstants.APP_TITLE);
             }
             else
             {
@@ -49,11 +47,11 @@ namespace ParkingLotManagement
                 if (saveResult)
                 {
                     ResetForm();
-                    MessageBox.Show("Car saved!", title);
+                    MessageBox.Show("Car saved!", GlobalConstants.APP_TITLE);
                 }
                 else
                 {
-                    MessageBox.Show("Car not saved!", title);
+                    MessageBox.Show("Car not saved!", GlobalConstants.APP_TITLE);
                 }
             }
 
@@ -65,40 +63,67 @@ namespace ParkingLotManagement
 
             string plate = plateTextBox.Text;
 
-                if (plate.Trim() == "" || plate.Length <= 5)
+            if (plate.Trim() == "" || plate.Length <= 5)
+            {
+                MessageBox.Show("Please fill the form!", GlobalConstants.APP_TITLE);
+            }
+            else
+            {
+                List<string> carInfo = FindCar(plate);
+                string enteranceDate = carInfo[0];
+                string floor = carInfo[1];
+
+                int price = PriceCalculator.Calculate(floor, enteranceDate);
+                int hours = HourCalculator.Calculate(enteranceDate);
+
+                ShowReceipt(hours, price, enteranceDate, plate);
+
+                bool result = ExitTheCarFromDatabase(plate);
+                if (result)
                 {
-                    MessageBox.Show("Please fill the form!", title);
+                    ResetForm();
+                    MessageBox.Show("Succesfully Exit!", GlobalConstants.APP_TITLE);
                 }
                 else
                 {
-                    bool result = CalculatePrice(plate);
-                    if(result == true)
-                    {
-                      bool saveResult = ExitTheCarFromDatabase(plate);
-                      if (saveResult)
-                      {
-                          ResetForm();
-                          MessageBox.Show("Succesfully Exit!", title);
-                      }
-                      else
-                      {
-                        MessageBox.Show("Car not saved!", title);
-                      }
-                    }
+                    MessageBox.Show("The car couldn't be exitted!", GlobalConstants.APP_TITLE);
                 }
+                
+            }
 
+        }
+
+
+        private List<string> FindCar(string plate)
+        {
+            List<string> car = new List<string>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
+            {
+                connection.Open();
+                string query = @"SELECT date, floor FROM parkinglot WHERE plate = :plate";
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                cmd.Parameters.Add("plate", DbType.String).Value = plate;
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    car.Add(rd[0].ToString());
+                    car.Add(rd[1].ToString());
+                }
+            }
+            return car;
         }
 
         
         private bool SaveTheCarToDatabase(string plate, string floor)
         {
 
-            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    string now = DateTime.Now.ToString();
+                    string now = DateTime.Now.ToString(GlobalConstants.DATE_FORMAT);
                     command.CommandText = "UPDATE parkinglot SET plate = :plate, date = :date, occupied = 1 WHERE id = (SELECT id FROM parkinglot WHERE occupied = 0 AND floor = :floor)";
                     command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.Parameters.Add("date", DbType.String).Value = now;
@@ -115,7 +140,7 @@ namespace ParkingLotManagement
         private bool ExitTheCarFromDatabase(string plate)
         {
 
-            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
@@ -139,121 +164,32 @@ namespace ParkingLotManagement
             purpleFloorRadioButton.Checked = false;
         }
 
-        private bool CalculatePrice(string plate)
-        {
-            
-            
-            
-            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.connectionString))
-            {
-                string usrDate = "";
-                connection.Open();
-                string query = @"SELECT date,floor,plate FROM parkinglot WHERE plate = :plate";
-                SQLiteCommand cmd = new SQLiteCommand(query, connection);
-                cmd.Parameters.Add("plate", DbType.String).Value= plate;
-                SQLiteDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
-                {
-                 string floor = rd[1].ToString();
-                 usrDate = rd[0].ToString();
-                 usrDate = usrDate.Substring(0, usrDate.Length - 3);
-                    try
-                    {
-                        DateTime targetDateTime = DateTime.ParseExact(usrDate, "MM/dd/yyyy H:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-                        DateTime now = DateTime.Now;
-                        TimeSpan diffrence = now - targetDateTime;
-                        if (diffrence.Days > 0)
-                        {
-                            MessageBox.Show("Your plate has been blocked for exceeding 24-hour time period. Please contact with supervisor!");
-                            int hours = diffrence.Hours;
-                            int price = hours * 5;
-                            GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
-                            return false;
-                        }
-                        else
-                        {
-                            int hours = diffrence.Hours;
-                            if (floor == "Blue")
-                            {
-                                int price = hours * 5;
-                                MessageBox.Show($"Price: {price}", title);
-                                GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
-
-                            }
-                            else if (floor == "Yellow")
-                            {
-                                int price = hours * 3;
-                                MessageBox.Show($"Price: {price}", title);
-                                GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
-                               
-                            }
-                            else if (floor == "Purple")
-                            {
-                                int price = hours * 4;
-                                MessageBox.Show($"Price: {price}", title);
-                                GetInformation(hours.ToString(), price.ToString(), rd[0].ToString(), plate);
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Error", title);
-                                break;
-                            }
-                            
-                        }
-                    }
-                    catch 
-                    {
-                        MessageBox.Show("Error", title);
-                        return false;
-                    }
-                }
-                
-            }
-            return true;
-        }
         private string GetSelectedFloorName()
         {
+
             if (blueFloorRadioButton.Checked)
-            {
-
-                return "Blue";
-
-            }
+            { return "Blue"; }
             else if (yellowFloorRadioButton.Checked)
-            {
-
-                return "Yellow";
-
-            }
+            { return "Yellow"; }
             else if (purpleFloorRadioButton.Checked)
-            {
-
-                return "Purple";
-
-            }
+            { return "Purple"; }
             else 
-            {
-
-                return "";
-
-            }
+            { return ""; }
         }
-        private void GetInformation(string hours, string price, string date, string plate)
+
+        private void ShowReceipt(int hours, int price, string date, string plate)
         {
-            List<string> data = new List<string>();
-            data.Add(hours);
-            data.Add(price);
-            data.Add(date);
-            data.Add(plate);
+            List<string> data = new List<string>
+            {
+                hours.ToString(),
+                price.ToString(),
+                date,
+                plate
+            };
             ReceiptForm receiptForm = new ReceiptForm(data);
             receiptForm.Show();
-
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 
 }

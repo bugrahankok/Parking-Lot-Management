@@ -95,6 +95,9 @@
     <Compile Include="admin_panel.Designer.cs">
       <DependentUpon>admin_panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalConstants.cs" />
+    <Compile Include="HourCalculator.cs" />
+    <Compile Include="PriceCalculator.cs" />
     <Compile Include="DatabaseUtils.cs" />
     <Compile Include="ReceiptForm.cs">
       <SubType>Form</SubType>

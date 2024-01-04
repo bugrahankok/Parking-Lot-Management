@@ -35,11 +35,13 @@
             // 
             // receiptBox
             // 
-            this.receiptBox.Location = new System.Drawing.Point(12, 35);
+            this.receiptBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.receiptBox.Location = new System.Drawing.Point(9, 28);
+            this.receiptBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.receiptBox.Multiline = true;
             this.receiptBox.Name = "receiptBox";
             this.receiptBox.ReadOnly = true;
-            this.receiptBox.Size = new System.Drawing.Size(437, 634);
+            this.receiptBox.Size = new System.Drawing.Size(329, 516);
             this.receiptBox.TabIndex = 0;
             this.receiptBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.receiptBox.WordWrap = false;
@@ -49,33 +51,36 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(415, 1);
+            this.button1.Location = new System.Drawing.Point(311, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 28);
+            this.button1.Size = new System.Drawing.Size(28, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.CloseButtonClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(167, 678);
+            this.button2.Location = new System.Drawing.Point(125, 551);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 47);
+            this.button2.Size = new System.Drawing.Size(98, 38);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // ReceiptForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(461, 737);
+            this.ClientSize = new System.Drawing.Size(346, 599);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.receiptBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReceiptForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReceiptForm";

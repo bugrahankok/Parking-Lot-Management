@@ -7,7 +7,6 @@ namespace ParkingLotManagement
 {
     public partial class admin_login : Form
     {
-        public string title = "Zloty Car Park";
         public admin_login()
         {
             InitializeComponent();
@@ -15,7 +14,7 @@ namespace ParkingLotManagement
         
         private void LoginButtonClick(object sender, EventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.connectionString))
+            using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 string query = "SELECT * FROM admin WHERE username= @user AND password= @pwd";
  
@@ -36,10 +35,9 @@ namespace ParkingLotManagement
                     adminWindow.Show();
                     this.Close();
                 }
-
                 else
                 {
-                    MessageBox.Show("Invalid username or password!",title);
+                    MessageBox.Show("Invalid username or password!", GlobalConstants.APP_TITLE);
                 }
 
                 conn.Close();
