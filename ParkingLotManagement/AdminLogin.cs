@@ -31,7 +31,7 @@ namespace ParkingLotManagement
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    ParkingLots adminWindow = new ParkingLots();
+                    AdminMain adminWindow = new AdminMain();
                     adminWindow.Show();
                     this.Close();
                 }

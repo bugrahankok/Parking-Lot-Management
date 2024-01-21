@@ -61,9 +61,6 @@ C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\bin\Debug\E
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\bin\Debug\System.Data.SQLite.xml
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.AssemblyReference.cache
-C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.admin_login.resources
-C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.admin_panel.resources
-C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.welcome.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.Properties.Resources.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.GenerateResource.cache
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.csproj.CoreCompileInputs.cache
@@ -99,3 +96,5 @@ C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\P
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.AdminMain.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ParkingLots.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.Main.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.AdminLogin.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ManageParkingLots.resources
