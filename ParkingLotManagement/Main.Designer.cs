@@ -32,17 +32,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.blueFloorRadioButton = new System.Windows.Forms.RadioButton();
-            this.yellowFloorRadioButton = new System.Windows.Forms.RadioButton();
-            this.purpleFloorRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.plateTextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
+            this.floorComboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.priceListLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // enter_btn
@@ -74,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 196);
+            this.label4.Location = new System.Drawing.Point(37, 188);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 18);
@@ -94,38 +94,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.AdminLoginClick);
-            // 
-            // blueFloorRadioButton
-            // 
-            this.blueFloorRadioButton.AutoSize = true;
-            this.blueFloorRadioButton.Checked = true;
-            this.blueFloorRadioButton.Location = new System.Drawing.Point(40, 217);
-            this.blueFloorRadioButton.Name = "blueFloorRadioButton";
-            this.blueFloorRadioButton.Size = new System.Drawing.Size(72, 17);
-            this.blueFloorRadioButton.TabIndex = 6;
-            this.blueFloorRadioButton.TabStop = true;
-            this.blueFloorRadioButton.Text = "Blue Floor";
-            this.blueFloorRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // yellowFloorRadioButton
-            // 
-            this.yellowFloorRadioButton.AutoSize = true;
-            this.yellowFloorRadioButton.Location = new System.Drawing.Point(118, 217);
-            this.yellowFloorRadioButton.Name = "yellowFloorRadioButton";
-            this.yellowFloorRadioButton.Size = new System.Drawing.Size(82, 17);
-            this.yellowFloorRadioButton.TabIndex = 7;
-            this.yellowFloorRadioButton.Text = "Yellow Floor";
-            this.yellowFloorRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // purpleFloorRadioButton
-            // 
-            this.purpleFloorRadioButton.AutoSize = true;
-            this.purpleFloorRadioButton.Location = new System.Drawing.Point(206, 217);
-            this.purpleFloorRadioButton.Name = "purpleFloorRadioButton";
-            this.purpleFloorRadioButton.Size = new System.Drawing.Size(81, 17);
-            this.purpleFloorRadioButton.TabIndex = 8;
-            this.purpleFloorRadioButton.Text = "Purple Floor";
-            this.purpleFloorRadioButton.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -156,19 +124,6 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "PRICE LIST";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(395, 152);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.label6.Size = new System.Drawing.Size(151, 138);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Blue Floor\r\n1 Hour = $5\r\n\r\nYellow Floor\r\n1 Hour = $4\r\n\r\nPurple Floor\r\n1 Hour = $3" +
-    "";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // plateTextBox
             // 
@@ -207,6 +162,45 @@
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.ExitButtonClick);
             // 
+            // floorComboBox
+            // 
+            this.floorComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.floorComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.floorComboBox.FormattingEnabled = true;
+            this.floorComboBox.Location = new System.Drawing.Point(40, 209);
+            this.floorComboBox.Name = "floorComboBox";
+            this.floorComboBox.Size = new System.Drawing.Size(247, 26);
+            this.floorComboBox.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panel1.Controls.Add(this.priceListLabel);
+            this.panel1.ForeColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(395, 151);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.MaximumSize = new System.Drawing.Size(168, 139);
+            this.panel1.MinimumSize = new System.Drawing.Size(168, 139);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(168, 139);
+            this.panel1.TabIndex = 16;
+            // 
+            // priceListLabel
+            // 
+            this.priceListLabel.AutoSize = true;
+            this.priceListLabel.ForeColor = System.Drawing.Color.White;
+            this.priceListLabel.Location = new System.Drawing.Point(1, 1);
+            this.priceListLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.priceListLabel.MaximumSize = new System.Drawing.Size(148, 0);
+            this.priceListLabel.MinimumSize = new System.Drawing.Size(148, 120);
+            this.priceListLabel.Name = "priceListLabel";
+            this.priceListLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.priceListLabel.Size = new System.Drawing.Size(148, 120);
+            this.priceListLabel.TabIndex = 0;
+            this.priceListLabel.Text = "label6";
+            this.priceListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main
             // 
             this.AllowDrop = true;
@@ -215,15 +209,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(589, 329);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.floorComboBox);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.plateTextBox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.purpleFloorRadioButton);
-            this.Controls.Add(this.yellowFloorRadioButton);
-            this.Controls.Add(this.blueFloorRadioButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -237,6 +229,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,15 +242,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton blueFloorRadioButton;
-        private System.Windows.Forms.RadioButton yellowFloorRadioButton;
-        private System.Windows.Forms.RadioButton purpleFloorRadioButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox plateTextBox;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.ComboBox floorComboBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label priceListLabel;
     }
 }
 

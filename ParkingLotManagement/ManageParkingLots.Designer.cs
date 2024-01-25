@@ -39,12 +39,15 @@
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.floorNameInput = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // floorComboBox
             // 
             this.floorComboBox.FormattingEnabled = true;
-            this.floorComboBox.Location = new System.Drawing.Point(150, 41);
+            this.floorComboBox.Location = new System.Drawing.Point(12, 79);
             this.floorComboBox.Name = "floorComboBox";
             this.floorComboBox.Size = new System.Drawing.Size(121, 21);
             this.floorComboBox.TabIndex = 0;
@@ -52,43 +55,46 @@
             // 
             // lotCountInput
             // 
-            this.lotCountInput.Location = new System.Drawing.Point(150, 89);
+            this.lotCountInput.Location = new System.Drawing.Point(161, 79);
             this.lotCountInput.Name = "lotCountInput";
             this.lotCountInput.Size = new System.Drawing.Size(121, 20);
             this.lotCountInput.TabIndex = 1;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(150, 171);
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.saveButton.Location = new System.Drawing.Point(12, 162);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Text = "Apply";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // hourPriceInput
             // 
-            this.hourPriceInput.Location = new System.Drawing.Point(150, 137);
+            this.hourPriceInput.Location = new System.Drawing.Point(161, 127);
             this.hourPriceInput.Name = "hourPriceInput";
-            this.hourPriceInput.Size = new System.Drawing.Size(100, 20);
+            this.hourPriceInput.Size = new System.Drawing.Size(121, 20);
             this.hourPriceInput.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(147, 25);
+            this.label1.Location = new System.Drawing.Point(9, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Floor";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(147, 73);
+            this.label2.Location = new System.Drawing.Point(158, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 6;
@@ -98,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(147, 121);
+            this.label3.Location = new System.Drawing.Point(158, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 7;
@@ -106,30 +112,42 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(13, 42);
+            this.addButton.BackColor = System.Drawing.Color.Maroon;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.addButton.Location = new System.Drawing.Point(112, 12);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(94, 23);
             this.addButton.TabIndex = 8;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Text = "Create Floors";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(13, 79);
+            this.editButton.BackColor = System.Drawing.Color.Maroon;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.editButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.editButton.Location = new System.Drawing.Point(12, 12);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(75, 23);
+            this.editButton.Size = new System.Drawing.Size(94, 23);
             this.editButton.TabIndex = 9;
-            this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Text = "Edit Floors";
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(13, 114);
+            this.deleteButton.BackColor = System.Drawing.Color.Maroon;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.deleteButton.Location = new System.Drawing.Point(212, 12);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteButton.Size = new System.Drawing.Size(94, 23);
             this.deleteButton.TabIndex = 10;
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Text = "Delete Floors";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // closeButton
             // 
@@ -146,12 +164,40 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButtonOnclick);
             // 
+            // floorNameInput
+            // 
+            this.floorNameInput.Location = new System.Drawing.Point(12, 125);
+            this.floorNameInput.Name = "floorNameInput";
+            this.floorNameInput.Size = new System.Drawing.Size(121, 20);
+            this.floorNameInput.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(9, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Floor Name";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(-1, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(379, 1);
+            this.label5.TabIndex = 14;
+            // 
             // ManageParkingLots
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(378, 221);
+            this.ClientSize = new System.Drawing.Size(378, 210);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.floorNameInput);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.editButton);
@@ -185,5 +231,8 @@
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.TextBox floorNameInput;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

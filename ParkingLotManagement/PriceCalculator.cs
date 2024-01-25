@@ -1,4 +1,8 @@
 ﻿
+using System.Data.SQLite;
+using System.Data;
+using System;
+
 namespace ParkingLotManagement
 {
     internal static class PriceCalculator
@@ -18,14 +22,20 @@ namespace ParkingLotManagement
 
         private static int GetPriceByFloor(string floor)
         {
-            if (floor == "Blue")
-            { return 5; }
-            else if (floor == "Yellow")
-            { return 4; }
-            else if (floor == "Purple")
-            { return 3; }
-
-            return 0;
+            int price = 0;
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
+            {
+                connection.Open();
+                string query = @"SELECT hour_price FROM floors WHERE name = :name";
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                cmd.Parameters.Add("name", DbType.String).Value = floor;
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    price = Int32.Parse(rd[0].ToString());
+                }
+            }
+            return price;
         }
     }
 }

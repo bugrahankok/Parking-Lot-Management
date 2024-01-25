@@ -3,15 +3,49 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Data;
 using System.Collections.Generic;
+using System.Linq;
+using System.Diagnostics;
+using System.Drawing;
 
 
 namespace ParkingLotManagement
 {
     public partial class Main : Form
     {
+        private List<KeyValuePair<int, string>> floorsForComboBox = new List<KeyValuePair<int, string>>();
+
         public Main()
         {
             InitializeComponent();
+            GetFloors();
+            ShowFloorInComboBox();
+            ShowPricesList();
+        }
+
+        private void GetFloors()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
+            {
+                conn.Open();
+                string query = @"SELECT * FROM floors";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    int id = Int32.Parse(rd[0].ToString());
+                    string floorName = rd[1].ToString();
+                    floorsForComboBox.Add(new KeyValuePair<int, string>(id, floorName));
+                }
+            }
+        }
+
+        private void ShowFloorInComboBox()
+        {
+            floorsForComboBox.ForEach(floorItem =>
+            {
+                this.floorComboBox.Items.Add(floorItem);
+            });
+            floorComboBox.SelectedIndex = 0;
         }
 
         private void CloseButtonClick(object sender, EventArgs e)
@@ -21,8 +55,11 @@ namespace ParkingLotManagement
 
         private void AdminLoginClick(object sender, EventArgs e)
         {
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.Show();
+            ManageParkingLots manageParkingLots = new ManageParkingLots();
+            manageParkingLots.Show();
+            //AdminLogin adminLogin = new AdminLogin();
+            //adminLogin.Show();
+            
         }
 
 
@@ -109,6 +146,25 @@ namespace ParkingLotManagement
             return car;
         }
 
+        private void ShowPricesList()
+        {
+            string pricesText = "";
+            using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
+            {
+                connection.Open();
+                string query = @"SELECT name, hour_price FROM floors";
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    string name = rd[0].ToString();
+                    int price = Int32.Parse(rd[1].ToString());
+                    pricesText = pricesText + name + " Floor" + "\n" + "1 Hour = " + price + " PLN\n\n";
+                }
+            }
+            priceListLabel.Text = pricesText;
+        }
+
         
         private bool SaveTheCarToDatabase(string plate, string floor)
         {
@@ -119,7 +175,7 @@ namespace ParkingLotManagement
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
                     string now = DateTime.Now.ToString(GlobalConstants.DATE_FORMAT);
-                    command.CommandText = "UPDATE parkinglot SET plate = :plate, date = :date, occupied = 1 WHERE id = (SELECT id FROM parkinglot WHERE occupied = 0 AND floor = :floor)";
+                    command.CommandText = "INSERT INTO parkinglot (plate, date, floor) VALUES (:plate, :date, :floor)";
                     command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.Parameters.Add("date", DbType.String).Value = now;
                     command.Parameters.Add("floor", DbType.String).Value = floor;
@@ -140,7 +196,7 @@ namespace ParkingLotManagement
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "UPDATE parkinglot SET plate = NULL, date = NULL, occupied = 0 WHERE plate = :plate";
+                    command.CommandText = "DELETE FROM parkinglot WHERE plate = :plate";
                     command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.ExecuteNonQuery();
 
@@ -154,22 +210,12 @@ namespace ParkingLotManagement
         private void ResetForm()
         {
             plateTextBox.ResetText();
-            blueFloorRadioButton.Checked = true;
-            yellowFloorRadioButton.Checked = false;
-            purpleFloorRadioButton.Checked = false;
+            floorComboBox.SelectedIndex = 0;
         }
 
         private string GetSelectedFloorName()
         {
-
-            if (blueFloorRadioButton.Checked)
-            { return "Blue"; }
-            else if (yellowFloorRadioButton.Checked)
-            { return "Yellow"; }
-            else if (purpleFloorRadioButton.Checked)
-            { return "Purple"; }
-            else 
-            { return ""; }
+            return floorsForComboBox.ElementAt(floorComboBox.SelectedIndex).Value;
         }
 
         private void ShowReceipt(int hours, int price, string date, string plate)
