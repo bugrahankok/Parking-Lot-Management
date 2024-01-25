@@ -55,11 +55,8 @@ namespace ParkingLotManagement
 
         private void AdminLoginClick(object sender, EventArgs e)
         {
-            ManageParkingLots manageParkingLots = new ManageParkingLots();
-            manageParkingLots.Show();
-            //AdminLogin adminLogin = new AdminLogin();
-            //adminLogin.Show();
-            
+            AdminLogin adminLogin = new AdminLogin();
+            adminLogin.Show();
         }
 
 
@@ -68,6 +65,12 @@ namespace ParkingLotManagement
            
             string plate = plateTextBox.Text;
             string floor = GetSelectedFloorName();
+            bool noAvailableSpace = !CheckIsThereAnyAvailableParkingLot(floor);
+
+            if (noAvailableSpace)
+            {
+                MessageBox.Show("There is no available lot in the selected floor!", GlobalConstants.APP_TITLE);
+            }
          
             if (plate.Trim() == "" || plate.Length <= 5 || floor == "")  
             {
@@ -123,6 +126,40 @@ namespace ParkingLotManagement
                 
             }
 
+        }
+
+        private bool CheckIsThereAnyAvailableParkingLot(string floorName)
+        {
+            int totalCarInFloor = 0;
+            int floorLotCountLimit = 0;
+
+            using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
+            {
+                conn.Open();
+                string query = @"SELECT COUNT(id) FROM paringlot WHERE floor = :floor";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.Add("floor", DbType.String).Value = floorName;
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    totalCarInFloor = Int32.Parse(rd[0].ToString());
+                }
+            }
+
+            using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
+            {
+                conn.Open();
+                string query = @"SELECT lot_count FROM floors WHERE name = :floor";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.Add("floor", DbType.String).Value = floorName;
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    floorLotCountLimit = Int32.Parse(rd[0].ToString());
+                }
+            }
+
+            return floorLotCountLimit - totalCarInFloor > 0;
         }
 
 
@@ -184,7 +221,6 @@ namespace ParkingLotManagement
                     return true;
                 }
             }
-
         }
 
 
@@ -230,7 +266,6 @@ namespace ParkingLotManagement
             ReceiptForm receiptForm = new ReceiptForm(data);
             receiptForm.Show();
         }
-
     }
 
 }

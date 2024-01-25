@@ -31,44 +31,93 @@
             this.showParkingLotsButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.manageParkingLotsButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.editAdminButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showParkingLotsButton
             // 
-            this.showParkingLotsButton.Location = new System.Drawing.Point(169, 106);
+            this.showParkingLotsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.showParkingLotsButton.FlatAppearance.BorderSize = 0;
+            this.showParkingLotsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showParkingLotsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showParkingLotsButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.showParkingLotsButton.Location = new System.Drawing.Point(85, 100);
             this.showParkingLotsButton.Name = "showParkingLotsButton";
-            this.showParkingLotsButton.Size = new System.Drawing.Size(112, 23);
+            this.showParkingLotsButton.Size = new System.Drawing.Size(276, 46);
             this.showParkingLotsButton.TabIndex = 0;
-            this.showParkingLotsButton.Text = "Show Parking Lots";
-            this.showParkingLotsButton.UseVisualStyleBackColor = true;
+            this.showParkingLotsButton.Text = "Show Current Parkings";
+            this.showParkingLotsButton.UseVisualStyleBackColor = false;
             this.showParkingLotsButton.Click += new System.EventHandler(this.ShowParkingLotsOnclick);
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(206, 154);
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.logoutButton.FlatAppearance.BorderSize = 0;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.logoutButton.Location = new System.Drawing.Point(183, 227);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(75, 23);
+            this.logoutButton.Size = new System.Drawing.Size(86, 38);
             this.logoutButton.TabIndex = 1;
             this.logoutButton.Text = "Logout";
-            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.LogOutOnclick);
             // 
             // manageParkingLotsButton
             // 
-            this.manageParkingLotsButton.Location = new System.Drawing.Point(162, 54);
+            this.manageParkingLotsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.manageParkingLotsButton.FlatAppearance.BorderSize = 0;
+            this.manageParkingLotsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageParkingLotsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageParkingLotsButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.manageParkingLotsButton.Location = new System.Drawing.Point(85, 48);
             this.manageParkingLotsButton.Name = "manageParkingLotsButton";
-            this.manageParkingLotsButton.Size = new System.Drawing.Size(119, 23);
+            this.manageParkingLotsButton.Size = new System.Drawing.Size(276, 46);
             this.manageParkingLotsButton.TabIndex = 2;
-            this.manageParkingLotsButton.Text = "Manage Parking Lots";
-            this.manageParkingLotsButton.UseVisualStyleBackColor = true;
+            this.manageParkingLotsButton.Text = "Manage Floors";
+            this.manageParkingLotsButton.UseVisualStyleBackColor = false;
             this.manageParkingLotsButton.Click += new System.EventHandler(this.ManageParkingLotsOnclick);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Red;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.closeButton.Location = new System.Drawing.Point(419, 0);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(34, 24);
+            this.closeButton.TabIndex = 12;
+            this.closeButton.Text = "X";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // editAdminButton
+            // 
+            this.editAdminButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.editAdminButton.FlatAppearance.BorderSize = 0;
+            this.editAdminButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editAdminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editAdminButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.editAdminButton.Location = new System.Drawing.Point(85, 152);
+            this.editAdminButton.Name = "editAdminButton";
+            this.editAdminButton.Size = new System.Drawing.Size(276, 46);
+            this.editAdminButton.TabIndex = 13;
+            this.editAdminButton.Text = "Edit Admin";
+            this.editAdminButton.UseVisualStyleBackColor = false;
+            this.editAdminButton.Click += new System.EventHandler(this.editAdminButton_Click);
             // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(452, 272);
+            this.ClientSize = new System.Drawing.Size(452, 291);
+            this.Controls.Add(this.editAdminButton);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.manageParkingLotsButton);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.showParkingLotsButton);
@@ -86,5 +135,7 @@
         private System.Windows.Forms.Button showParkingLotsButton;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button manageParkingLotsButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button editAdminButton;
     }
 }
