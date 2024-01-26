@@ -101,12 +101,25 @@
     <Compile Include="AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
+    <Compile Include="Components\ParkingLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ParkingLot.Designer.cs">
+      <DependentUpon>ParkingLot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Floor.cs" />
     <Compile Include="ManageParkingLots.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageParkingLots.Designer.cs">
       <DependentUpon>ManageParkingLots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkingFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkingFloors.Designer.cs">
+      <DependentUpon>ParkingFloors.cs</DependentUpon>
     </Compile>
     <Compile Include="ParkingLots.cs">
       <SubType>Form</SubType>
@@ -141,8 +154,14 @@
     <EmbeddedResource Include="AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\ParkingLot.resx">
+      <DependentUpon>ParkingLot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageParkingLots.resx">
       <DependentUpon>ManageParkingLots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkingFloors.resx">
+      <DependentUpon>ParkingFloors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParkingLots.resx">
       <DependentUpon>ParkingLots.cs</DependentUpon>

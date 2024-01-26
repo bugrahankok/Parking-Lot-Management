@@ -19,8 +19,8 @@ namespace ParkingLotManagement
 
         private void ShowParkingLotsOnclick(object sender, EventArgs e)
         {
-            ParkingLots parkingLots = new ParkingLots();
-            parkingLots.Show();
+            ParkingFloors parkingFloors = new ParkingFloors();
+            parkingFloors.Show();
         }
 
         private void LogOutOnclick(object sender, EventArgs e)
@@ -41,7 +41,8 @@ namespace ParkingLotManagement
 
         private void editAdminButton_Click(object sender, EventArgs e)
         {
-
+            AdminEdit adminEdit = new AdminEdit();
+            adminEdit.Show();
         }
     }
 }

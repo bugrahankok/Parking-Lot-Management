@@ -40,6 +40,7 @@
             this.floorComboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.priceListLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -186,6 +187,14 @@
             this.priceListLabel.Text = "label6";
             this.priceListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.label6.Location = new System.Drawing.Point(547, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 185);
+            this.label6.TabIndex = 17;
+            // 
             // Main
             // 
             this.AllowDrop = true;
@@ -193,6 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(589, 329);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.floorComboBox);
             this.Controls.Add(this.exit_btn);
@@ -232,6 +242,7 @@
         private System.Windows.Forms.ComboBox floorComboBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label priceListLabel;
+        private System.Windows.Forms.Label label6;
     }
 }
 

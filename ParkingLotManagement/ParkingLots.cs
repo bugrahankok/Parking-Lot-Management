@@ -20,7 +20,7 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT floor, spot, plate, date FROM parkinglot WHERE occupied=1";
+                string query = @"SELECT floor, plate, date FROM parkinglot WHERE plate != null";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())

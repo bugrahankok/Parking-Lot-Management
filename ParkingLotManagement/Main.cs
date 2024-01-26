@@ -55,8 +55,9 @@ namespace ParkingLotManagement
 
         private void AdminLoginClick(object sender, EventArgs e)
         {
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.Show();
+            new ParkingFloors().Show();
+            //AdminLogin adminLogin = new AdminLogin();
+            //adminLogin.Show();
         }
 
 
@@ -136,7 +137,7 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT COUNT(id) FROM paringlot WHERE floor = :floor";
+                string query = @"SELECT COUNT(id) FROM parkinglot WHERE floor = :floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.Add("floor", DbType.String).Value = floorName;
                 SQLiteDataReader rd = cmd.ExecuteReader();

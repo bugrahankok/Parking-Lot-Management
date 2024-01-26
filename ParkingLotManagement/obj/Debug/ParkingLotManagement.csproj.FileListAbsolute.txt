@@ -99,3 +99,5 @@ C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\P
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.AdminLogin.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ManageParkingLots.resources
 C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.AdminEdit.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.Components.ParkingLot.resources
+C:\Users\bugra\Documents\Parking-Lot-Management\ParkingLotManagement\obj\Debug\ParkingLotManagement.ParkingFloors.resources

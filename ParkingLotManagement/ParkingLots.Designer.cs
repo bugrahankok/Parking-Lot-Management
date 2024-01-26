@@ -96,10 +96,14 @@
             this.Purple2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Purple1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.floorsTab.SuspendLayout();
             this.blueFloorTab.SuspendLayout();
             this.yellowFloorTab.SuspendLayout();
             this.purpleFloorTab.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // closeButton
@@ -108,7 +112,7 @@
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.Location = new System.Drawing.Point(843, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(35, 22);
             this.closeButton.TabIndex = 2;
@@ -133,6 +137,7 @@
             // blueFloorTab
             // 
             this.blueFloorTab.BackColor = System.Drawing.Color.MidnightBlue;
+            this.blueFloorTab.Controls.Add(this.flowLayoutPanel1);
             this.blueFloorTab.Controls.Add(this.label12);
             this.blueFloorTab.Controls.Add(this.label10);
             this.blueFloorTab.Controls.Add(this.label9);
@@ -155,9 +160,9 @@
             this.blueFloorTab.Controls.Add(this.labelCorridor);
             this.blueFloorTab.Controls.Add(this.Blue1);
             this.blueFloorTab.Location = new System.Drawing.Point(4, 25);
-            this.blueFloorTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blueFloorTab.Margin = new System.Windows.Forms.Padding(2);
             this.blueFloorTab.Name = "blueFloorTab";
-            this.blueFloorTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blueFloorTab.Padding = new System.Windows.Forms.Padding(2);
             this.blueFloorTab.Size = new System.Drawing.Size(869, 320);
             this.blueFloorTab.TabIndex = 0;
             this.blueFloorTab.Text = "Blue Floor";
@@ -269,7 +274,7 @@
             this.Blue10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue10.Location = new System.Drawing.Point(682, 202);
-            this.Blue10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue10.Margin = new System.Windows.Forms.Padding(2);
             this.Blue10.Name = "Blue10";
             this.Blue10.Size = new System.Drawing.Size(160, 90);
             this.Blue10.TabIndex = 20;
@@ -284,7 +289,7 @@
             this.Blue9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue9.Location = new System.Drawing.Point(518, 202);
-            this.Blue9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue9.Margin = new System.Windows.Forms.Padding(2);
             this.Blue9.Name = "Blue9";
             this.Blue9.Size = new System.Drawing.Size(160, 90);
             this.Blue9.TabIndex = 19;
@@ -299,7 +304,7 @@
             this.Blue8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue8.Location = new System.Drawing.Point(354, 202);
-            this.Blue8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue8.Margin = new System.Windows.Forms.Padding(2);
             this.Blue8.Name = "Blue8";
             this.Blue8.Size = new System.Drawing.Size(160, 90);
             this.Blue8.TabIndex = 18;
@@ -314,7 +319,7 @@
             this.Blue7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue7.Location = new System.Drawing.Point(190, 202);
-            this.Blue7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue7.Margin = new System.Windows.Forms.Padding(2);
             this.Blue7.Name = "Blue7";
             this.Blue7.Size = new System.Drawing.Size(160, 90);
             this.Blue7.TabIndex = 17;
@@ -329,7 +334,7 @@
             this.Blue6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue6.Location = new System.Drawing.Point(26, 202);
-            this.Blue6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue6.Margin = new System.Windows.Forms.Padding(2);
             this.Blue6.Name = "Blue6";
             this.Blue6.Size = new System.Drawing.Size(160, 90);
             this.Blue6.TabIndex = 16;
@@ -344,7 +349,7 @@
             this.Blue5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue5.Location = new System.Drawing.Point(682, 29);
-            this.Blue5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue5.Margin = new System.Windows.Forms.Padding(2);
             this.Blue5.Name = "Blue5";
             this.Blue5.Size = new System.Drawing.Size(160, 90);
             this.Blue5.TabIndex = 15;
@@ -359,7 +364,7 @@
             this.Blue4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue4.Location = new System.Drawing.Point(518, 29);
-            this.Blue4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue4.Margin = new System.Windows.Forms.Padding(2);
             this.Blue4.Name = "Blue4";
             this.Blue4.Size = new System.Drawing.Size(160, 90);
             this.Blue4.TabIndex = 14;
@@ -374,7 +379,7 @@
             this.Blue3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue3.Location = new System.Drawing.Point(354, 29);
-            this.Blue3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue3.Margin = new System.Windows.Forms.Padding(2);
             this.Blue3.Name = "Blue3";
             this.Blue3.Size = new System.Drawing.Size(160, 90);
             this.Blue3.TabIndex = 13;
@@ -389,7 +394,7 @@
             this.Blue2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue2.Location = new System.Drawing.Point(190, 29);
-            this.Blue2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue2.Margin = new System.Windows.Forms.Padding(2);
             this.Blue2.Name = "Blue2";
             this.Blue2.Size = new System.Drawing.Size(160, 90);
             this.Blue2.TabIndex = 12;
@@ -415,7 +420,7 @@
             this.Blue1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Blue1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Blue1.Location = new System.Drawing.Point(26, 29);
-            this.Blue1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Blue1.Margin = new System.Windows.Forms.Padding(2);
             this.Blue1.Name = "Blue1";
             this.Blue1.Size = new System.Drawing.Size(160, 90);
             this.Blue1.TabIndex = 10;
@@ -448,9 +453,9 @@
             this.yellowFloorTab.Controls.Add(this.label1);
             this.yellowFloorTab.Controls.Add(this.Yellow1);
             this.yellowFloorTab.Location = new System.Drawing.Point(4, 25);
-            this.yellowFloorTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yellowFloorTab.Margin = new System.Windows.Forms.Padding(2);
             this.yellowFloorTab.Name = "yellowFloorTab";
-            this.yellowFloorTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yellowFloorTab.Padding = new System.Windows.Forms.Padding(2);
             this.yellowFloorTab.Size = new System.Drawing.Size(869, 320);
             this.yellowFloorTab.TabIndex = 1;
             this.yellowFloorTab.Text = "Yellow Floor";
@@ -562,7 +567,7 @@
             this.Yellow10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow10.Location = new System.Drawing.Point(682, 202);
-            this.Yellow10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow10.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow10.Name = "Yellow10";
             this.Yellow10.Size = new System.Drawing.Size(160, 90);
             this.Yellow10.TabIndex = 31;
@@ -577,7 +582,7 @@
             this.Yellow9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow9.Location = new System.Drawing.Point(518, 202);
-            this.Yellow9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow9.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow9.Name = "Yellow9";
             this.Yellow9.Size = new System.Drawing.Size(160, 90);
             this.Yellow9.TabIndex = 30;
@@ -592,7 +597,7 @@
             this.Yellow8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow8.Location = new System.Drawing.Point(354, 202);
-            this.Yellow8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow8.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow8.Name = "Yellow8";
             this.Yellow8.Size = new System.Drawing.Size(160, 90);
             this.Yellow8.TabIndex = 29;
@@ -607,7 +612,7 @@
             this.Yellow7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow7.Location = new System.Drawing.Point(190, 202);
-            this.Yellow7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow7.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow7.Name = "Yellow7";
             this.Yellow7.Size = new System.Drawing.Size(160, 90);
             this.Yellow7.TabIndex = 28;
@@ -622,7 +627,7 @@
             this.Yellow6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow6.Location = new System.Drawing.Point(26, 202);
-            this.Yellow6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow6.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow6.Name = "Yellow6";
             this.Yellow6.Size = new System.Drawing.Size(160, 90);
             this.Yellow6.TabIndex = 27;
@@ -637,7 +642,7 @@
             this.Yellow5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow5.Location = new System.Drawing.Point(682, 29);
-            this.Yellow5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow5.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow5.Name = "Yellow5";
             this.Yellow5.Size = new System.Drawing.Size(160, 90);
             this.Yellow5.TabIndex = 26;
@@ -652,7 +657,7 @@
             this.Yellow4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow4.Location = new System.Drawing.Point(518, 29);
-            this.Yellow4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow4.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow4.Name = "Yellow4";
             this.Yellow4.Size = new System.Drawing.Size(160, 90);
             this.Yellow4.TabIndex = 25;
@@ -667,7 +672,7 @@
             this.Yellow3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow3.Location = new System.Drawing.Point(354, 29);
-            this.Yellow3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow3.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow3.Name = "Yellow3";
             this.Yellow3.Size = new System.Drawing.Size(160, 90);
             this.Yellow3.TabIndex = 24;
@@ -682,7 +687,7 @@
             this.Yellow2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow2.Location = new System.Drawing.Point(190, 29);
-            this.Yellow2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow2.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow2.Name = "Yellow2";
             this.Yellow2.Size = new System.Drawing.Size(160, 90);
             this.Yellow2.TabIndex = 23;
@@ -708,7 +713,7 @@
             this.Yellow1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Yellow1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Yellow1.Location = new System.Drawing.Point(26, 29);
-            this.Yellow1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yellow1.Margin = new System.Windows.Forms.Padding(2);
             this.Yellow1.Name = "Yellow1";
             this.Yellow1.Size = new System.Drawing.Size(160, 90);
             this.Yellow1.TabIndex = 21;
@@ -741,7 +746,7 @@
             this.purpleFloorTab.Controls.Add(this.label2);
             this.purpleFloorTab.Controls.Add(this.Purple1);
             this.purpleFloorTab.Location = new System.Drawing.Point(4, 25);
-            this.purpleFloorTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.purpleFloorTab.Margin = new System.Windows.Forms.Padding(2);
             this.purpleFloorTab.Name = "purpleFloorTab";
             this.purpleFloorTab.Size = new System.Drawing.Size(869, 320);
             this.purpleFloorTab.TabIndex = 2;
@@ -854,7 +859,7 @@
             this.Purple10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple10.Location = new System.Drawing.Point(682, 202);
-            this.Purple10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple10.Margin = new System.Windows.Forms.Padding(2);
             this.Purple10.Name = "Purple10";
             this.Purple10.Size = new System.Drawing.Size(160, 90);
             this.Purple10.TabIndex = 31;
@@ -869,7 +874,7 @@
             this.Purple9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple9.Location = new System.Drawing.Point(518, 202);
-            this.Purple9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple9.Margin = new System.Windows.Forms.Padding(2);
             this.Purple9.Name = "Purple9";
             this.Purple9.Size = new System.Drawing.Size(160, 90);
             this.Purple9.TabIndex = 30;
@@ -884,7 +889,7 @@
             this.Purple8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple8.Location = new System.Drawing.Point(354, 202);
-            this.Purple8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple8.Margin = new System.Windows.Forms.Padding(2);
             this.Purple8.Name = "Purple8";
             this.Purple8.Size = new System.Drawing.Size(160, 90);
             this.Purple8.TabIndex = 29;
@@ -899,7 +904,7 @@
             this.Purple7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple7.Location = new System.Drawing.Point(190, 202);
-            this.Purple7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple7.Margin = new System.Windows.Forms.Padding(2);
             this.Purple7.Name = "Purple7";
             this.Purple7.Size = new System.Drawing.Size(160, 90);
             this.Purple7.TabIndex = 28;
@@ -914,7 +919,7 @@
             this.Purple6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple6.Location = new System.Drawing.Point(26, 202);
-            this.Purple6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple6.Margin = new System.Windows.Forms.Padding(2);
             this.Purple6.Name = "Purple6";
             this.Purple6.Size = new System.Drawing.Size(160, 90);
             this.Purple6.TabIndex = 27;
@@ -929,7 +934,7 @@
             this.Purple5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple5.Location = new System.Drawing.Point(682, 29);
-            this.Purple5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple5.Margin = new System.Windows.Forms.Padding(2);
             this.Purple5.Name = "Purple5";
             this.Purple5.Size = new System.Drawing.Size(160, 90);
             this.Purple5.TabIndex = 26;
@@ -944,7 +949,7 @@
             this.Purple4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple4.Location = new System.Drawing.Point(518, 29);
-            this.Purple4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple4.Margin = new System.Windows.Forms.Padding(2);
             this.Purple4.Name = "Purple4";
             this.Purple4.Size = new System.Drawing.Size(160, 90);
             this.Purple4.TabIndex = 25;
@@ -959,7 +964,7 @@
             this.Purple3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple3.Location = new System.Drawing.Point(354, 29);
-            this.Purple3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple3.Margin = new System.Windows.Forms.Padding(2);
             this.Purple3.Name = "Purple3";
             this.Purple3.Size = new System.Drawing.Size(160, 90);
             this.Purple3.TabIndex = 24;
@@ -974,7 +979,7 @@
             this.Purple2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple2.Location = new System.Drawing.Point(190, 29);
-            this.Purple2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple2.Margin = new System.Windows.Forms.Padding(2);
             this.Purple2.Name = "Purple2";
             this.Purple2.Size = new System.Drawing.Size(160, 90);
             this.Purple2.TabIndex = 23;
@@ -1000,13 +1005,40 @@
             this.Purple1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purple1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Purple1.Location = new System.Drawing.Point(26, 29);
-            this.Purple1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Purple1.Margin = new System.Windows.Forms.Padding(2);
             this.Purple1.Name = "Purple1";
             this.Purple1.Size = new System.Drawing.Size(160, 90);
             this.Purple1.TabIndex = 21;
             this.Purple1.Text = "Available";
             this.Purple1.UseVisualStyleBackColor = false;
             this.Purple1.Click += new System.EventHandler(this.Purple1_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(218, 124);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(84, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // ParkingLots
             // 
@@ -1018,7 +1050,7 @@
             this.Controls.Add(this.floorsTab);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ParkingLots";
@@ -1031,6 +1063,7 @@
             this.yellowFloorTab.PerformLayout();
             this.purpleFloorTab.ResumeLayout(false);
             this.purpleFloorTab.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1105,5 +1138,8 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
