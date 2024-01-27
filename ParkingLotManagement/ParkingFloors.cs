@@ -25,15 +25,15 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT * FROM floors";
+                string query = @"SELECT * FROM floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    int id = Int32.Parse(rd[0].ToString());
-                    string floorName = rd[1].ToString();
-                    int lotCount = Int32.Parse(rd[2].ToString());
-                    int hourPrice = Int32.Parse(rd[3].ToString());
+                    int id = rd.GetInt32(0);
+                    string floorName = rd.GetString(1);
+                    int lotCount = rd.GetInt32(2);
+                    int hourPrice = rd.GetInt32(3);
 
                     Floor floor = new Floor(id, floorName, lotCount, hourPrice);
                     floors.Add(floor);
@@ -87,16 +87,20 @@ namespace ParkingLotManagement
                 if (cars.Count >= i)
                 {
                     Car car = cars.ElementAt(i - 1);
+                    string priceLine = PriceCalculator.Calculate(car.getFloor(), car.getDate()) + " " + GlobalConstants.POLISH_ZLOTY;
                     lotDescription.Add(car.getPlate());
                     lotDescription.Add(car.getDate());
+                    lotDescription.Add(priceLine);
                 } else
                 {
-                    lotDescription.Add("AVAILABLE");
+                    lotDescription.Add(GlobalConstants.AVAILABLE);
                 }
 
-                ParkingLot parkingLot = new ParkingLot(lotName, lotDescription);
-                parkingLot.Width = 180;
-                parkingLot.Height = 145;
+                ParkingLot parkingLot = new ParkingLot(lotName, lotDescription)
+                {
+                    Width = 180,
+                    Height = 145
+                };
                 parkingLots.Add(parkingLot);
             }
             return parkingLots;
@@ -108,7 +112,7 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT id, floor, plate, date FROM parkinglot WHERE floor = :floor";
+                string query = @"SELECT id, floor, plate, date FROM lot WHERE floor = :floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.Add("floor", DbType.String).Value = floorName;
                 SQLiteDataReader rd = cmd.ExecuteReader();

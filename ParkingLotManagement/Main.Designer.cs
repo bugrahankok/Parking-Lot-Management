@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.enter_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -84,7 +85,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.pictureBox1.Image = global::ParkingLotManagement.Properties.Resources._299105_lock_icon;
+            this.pictureBox1.Image = global::ParkingLotManagement.Properties.Resources.admin_icon;
             this.pictureBox1.Location = new System.Drawing.Point(255, 295);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -120,7 +121,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(395, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(231, 26);
+            this.label5.Size = new System.Drawing.Size(232, 33);
             this.label5.TabIndex = 11;
             this.label5.Text = "PRICE LIST";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,6 +217,7 @@
             this.Controls.Add(this.enter_btn);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Main";

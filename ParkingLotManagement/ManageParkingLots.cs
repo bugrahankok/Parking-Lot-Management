@@ -96,7 +96,7 @@ namespace ParkingLotManagement
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "INSERT INTO floors (name, lot_count, hour_price) VALUES (:name, :lot_count, :hour_price)";
+                    command.CommandText = "INSERT INTO floor (name, lot_count, hour_price) VALUES (:name, :lot_count, :hour_price)";
                     command.Parameters.Add("name", DbType.String).Value = floor.getName();
                     command.Parameters.Add("lot_count", DbType.Int32).Value = floor.getLotCount();
                     command.Parameters.Add("hour_price", DbType.Int32).Value = floor.getHourPrice();
@@ -114,7 +114,7 @@ namespace ParkingLotManagement
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "DELETE FROM floors WHERE id = :id";
+                    command.CommandText = "DELETE FROM floor WHERE id = :id";
                     command.Parameters.Add("id", DbType.Int32).Value = id;
                     command.ExecuteNonQuery();
 
@@ -130,7 +130,7 @@ namespace ParkingLotManagement
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "UPDATE floors SET name = :name, lot_count = :lot_count, hour_price = :hour_price WHERE id = :id";
+                    command.CommandText = "UPDATE floor SET name = :name, lot_count = :lot_count, hour_price = :hour_price WHERE id = :id";
                     command.Parameters.Add("id", DbType.Int32).Value = floor.getId();
                     command.Parameters.Add("name", DbType.String).Value = floor.getName();
                     command.Parameters.Add("lot_count", DbType.Int32).Value = floor.getLotCount();
@@ -147,15 +147,15 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT * FROM floors";
+                string query = @"SELECT * FROM floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    int id = Int32.Parse(rd[0].ToString());
-                    string floorName = rd[1].ToString();
-                    int lotCount = Int32.Parse(rd[2].ToString());
-                    int hourPrice = Int32.Parse(rd[3].ToString());
+                    int id = rd.GetInt32(0);
+                    string floorName = rd.GetString(1);
+                    int lotCount = rd.GetInt32(2);
+                    int hourPrice = rd.GetInt32(3);
                     floorsForComboBox.Add(new KeyValuePair<int, string>(id , floorName));
 
                     Floor floor = new Floor(id, floorName, lotCount, hourPrice);

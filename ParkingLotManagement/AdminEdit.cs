@@ -23,8 +23,8 @@ namespace ParkingLotManagement
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    string username = rd[0].ToString();
-                    string password = rd[1].ToString();
+                    string username = rd.GetString(0);
+                    string password = rd.GetString(1);
                     
                     usernameInput.Text = username;
                     passwordInput.Text = password;

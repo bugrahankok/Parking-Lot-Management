@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageParkingLots));
             this.floorComboBox = new System.Windows.Forms.ComboBox();
             this.lotCountInput = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
@@ -210,6 +211,7 @@
             this.Controls.Add(this.lotCountInput);
             this.Controls.Add(this.floorComboBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageParkingLots";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Parking Lots";

@@ -35,6 +35,7 @@
             // lotDescriptionsButton
             // 
             this.lotDescriptionsButton.BackColor = System.Drawing.Color.Green;
+            this.lotDescriptionsButton.Enabled = false;
             this.lotDescriptionsButton.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.lotDescriptionsButton.FlatAppearance.BorderSize = 0;
             this.lotDescriptionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -53,7 +54,7 @@
             this.lotNameLabel.AutoSize = true;
             this.lotNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lotNameLabel.ForeColor = System.Drawing.Color.White;
-            this.lotNameLabel.Location = new System.Drawing.Point(64, 7);
+            this.lotNameLabel.Location = new System.Drawing.Point(64, 9);
             this.lotNameLabel.Name = "lotNameLabel";
             this.lotNameLabel.Size = new System.Drawing.Size(39, 15);
             this.lotNameLabel.TabIndex = 1;

@@ -204,7 +204,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\299105_lock_icon.png" />
+    <None Include="Resources\admin_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

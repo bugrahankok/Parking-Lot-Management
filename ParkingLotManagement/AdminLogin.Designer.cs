@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             this.closeButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
@@ -109,7 +110,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ParkingLotManagement.Properties.Resources._299105_lock_icon;
+            this.pictureBox1.Image = global::ParkingLotManagement.Properties.Resources.admin_icon;
             this.pictureBox1.Location = new System.Drawing.Point(116, 54);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -134,6 +135,7 @@
             this.Controls.Add(this.closeButton);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminLogin";
             this.ShowInTaskbar = false;

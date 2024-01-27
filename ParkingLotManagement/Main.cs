@@ -25,13 +25,13 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT * FROM floors";
+                string query = @"SELECT * FROM floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    int id = Int32.Parse(rd[0].ToString());
-                    string floorName = rd[1].ToString();
+                    int id = rd.GetInt32(0);
+                    string floorName = rd.GetString(1);
                     floorsForComboBox.Add(new KeyValuePair<int, string>(id, floorName));
                 }
             }
@@ -110,7 +110,7 @@ namespace ParkingLotManagement
                 if (result)
                 {
                     ResetForm();
-                    MessageBox.Show("Succesfully Exit!", GlobalConstants.APP_TITLE);
+                    MessageBox.Show("The car is succesfully exitted!", GlobalConstants.APP_TITLE);
                 }
                 else
                 {
@@ -129,26 +129,26 @@ namespace ParkingLotManagement
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT COUNT(id) FROM parkinglot WHERE floor = :floor";
+                string query = @"SELECT COUNT(id) FROM lot WHERE floor = :floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.Add("floor", DbType.String).Value = floorName;
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    totalCarInFloor = Int32.Parse(rd[0].ToString());
+                    totalCarInFloor = rd.GetInt32(0);
                 }
             }
 
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 conn.Open();
-                string query = @"SELECT lot_count FROM floors WHERE name = :floor";
+                string query = @"SELECT lot_count FROM floor WHERE name = :floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.Add("floor", DbType.String).Value = floorName;
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    floorLotCountLimit = Int32.Parse(rd[0].ToString());
+                    floorLotCountLimit = rd.GetInt32(0);
                 }
             }
 
@@ -163,7 +163,7 @@ namespace ParkingLotManagement
             using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 connection.Open();
-                string query = @"SELECT date, floor FROM parkinglot WHERE plate = :plate";
+                string query = @"SELECT date, floor FROM lot WHERE plate = :plate";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
                 cmd.Parameters.Add("plate", DbType.String).Value = plate;
                 SQLiteDataReader rd = cmd.ExecuteReader();
@@ -182,14 +182,17 @@ namespace ParkingLotManagement
             using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 connection.Open();
-                string query = @"SELECT name, hour_price FROM floors";
+                string query = @"SELECT name, hour_price FROM floor";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
                 SQLiteDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    string name = rd[0].ToString();
-                    int price = Int32.Parse(rd[1].ToString());
-                    pricesText = pricesText + name + " Floor" + "\n" + "1 Hour = " + price + " PLN\n\n";
+                    string name = rd.GetString(0);
+                    int price = rd.GetInt32(1);
+                    pricesText = pricesText + name + " Floor" 
+                                            + "\n" 
+                                            + "1 Hour = " + price + " " + GlobalConstants.POLISH_ZLOTY 
+                                            + "\n\n";
                 }
             }
             priceListLabel.Text = pricesText;
@@ -205,7 +208,7 @@ namespace ParkingLotManagement
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
                     string now = DateTime.Now.ToString(GlobalConstants.DATE_FORMAT);
-                    command.CommandText = "INSERT INTO parkinglot (plate, date, floor) VALUES (:plate, :date, :floor)";
+                    command.CommandText = "INSERT INTO lot (plate, date, floor) VALUES (:plate, :date, :floor)";
                     command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.Parameters.Add("date", DbType.String).Value = now;
                     command.Parameters.Add("floor", DbType.String).Value = floor;
@@ -225,7 +228,7 @@ namespace ParkingLotManagement
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "DELETE FROM parkinglot WHERE plate = :plate";
+                    command.CommandText = "DELETE FROM lot WHERE plate = :plate";
                     command.Parameters.Add("plate", DbType.String).Value = plate;
                     command.ExecuteNonQuery();
 

@@ -26,7 +26,7 @@ namespace ParkingLotManagement
             using (SQLiteConnection connection = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
                 connection.Open();
-                string query = @"SELECT hour_price FROM floors WHERE name = :name";
+                string query = @"SELECT hour_price FROM floor WHERE name = :name";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
                 cmd.Parameters.Add("name", DbType.String).Value = floor;
                 SQLiteDataReader rd = cmd.ExecuteReader();

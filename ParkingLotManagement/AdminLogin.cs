@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
 
@@ -14,33 +13,34 @@ namespace ParkingLotManagement
         
         private void LoginButtonClick(object sender, EventArgs e)
         {
+            bool isLoginSuccessful = false;
+
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseUtils.CONNECTION_STRING))
             {
-                string query = "SELECT * FROM admin WHERE username= @user AND password= @pwd";
- 
                 conn.Open();
-           
+                string query = @"SELECT COUNT(id) FROM admin WHERE username = :username AND password = :password";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-               
-                cmd.Parameters.AddWithValue("@user", usernameTextBox.Text);
-                cmd.Parameters.AddWithValue("@pwd", passwordTextBox.Text);
-                
-                DataTable dataTable = new DataTable();
-                da.Fill(dataTable);
-
-                if (dataTable.Rows.Count > 0)
+                cmd.Parameters.AddWithValue("username", usernameTextBox.Text);
+                cmd.Parameters.AddWithValue("password", passwordTextBox.Text);
+                SQLiteDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
                 {
-                    AdminMain adminWindow = new AdminMain();
-                    adminWindow.Show();
-                    this.Close();
+                    if (rd.GetInt32(0) > 0)
+                    {
+                        isLoginSuccessful = true;
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Invalid username or password!", GlobalConstants.APP_TITLE);
-                }
+            }
 
-                conn.Close();
+            if (isLoginSuccessful)
+            {
+                AdminMain adminWindow = new AdminMain();
+                adminWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password!", GlobalConstants.APP_TITLE);
             }
         }
 

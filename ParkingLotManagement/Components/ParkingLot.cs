@@ -15,9 +15,16 @@ namespace ParkingLotManagement.Components
 
         private void SetTexts(string lotName, List<string> lotDescriptions)
         {
-            this.lotNameLabel.Text = lotName;
-            this.lotDescriptionsButton.Text = String.Join("\n", lotDescriptions);
-            this.lotDescriptionsButton.BackColor = lotDescriptions.Count > 1 ? Color.IndianRed : Color.Green;
+            lotNameLabel.Text = lotName;
+            lotDescriptionsButton.Text = String.Join(Environment.NewLine, lotDescriptions);
+            SetColors(lotDescriptions.Count);
+        }
+
+        private void SetColors(int descriptionCount)
+        {
+            lotDescriptionsButton.BackColor = descriptionCount > 1 ? Color.IndianRed : Color.Green;
+            lotDescriptionsButton.ForeColor = Color.White;
+            lotNameLabel.ForeColor = Color.White;
         }
     }
 }

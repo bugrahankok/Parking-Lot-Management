@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParkingFloors));
             this.floorTab1 = new System.Windows.Forms.TabPage();
             this.floorsTab = new System.Windows.Forms.TabControl();
             this.floorsTab.SuspendLayout();
@@ -62,6 +63,7 @@
             this.ClientSize = new System.Drawing.Size(984, 399);
             this.Controls.Add(this.floorsTab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ParkingFloors";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "All Parking Floors";
