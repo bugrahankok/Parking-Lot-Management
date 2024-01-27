@@ -175,7 +175,7 @@
     </Compile>
     <None Include="DB Browser %28SQLite%29.lnk" />
     <None Include="packages.config" />
-    <None Include="parklotdata.db">
+    <None Include="CarPark.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
