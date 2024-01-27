@@ -44,6 +44,7 @@
             this.receiptBox.ReadOnly = true;
             this.receiptBox.Size = new System.Drawing.Size(397, 342);
             this.receiptBox.TabIndex = 0;
+            this.receiptBox.Text = "Example Receipt\r\nWarsaw, Poland\r\nPrice: 10 PLN";
             this.receiptBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.receiptBox.WordWrap = false;
             // 

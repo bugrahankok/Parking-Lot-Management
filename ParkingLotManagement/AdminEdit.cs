@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace ParkingLotManagement
@@ -35,11 +33,6 @@ namespace ParkingLotManagement
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

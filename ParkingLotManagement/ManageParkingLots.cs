@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ParkingLotManagement
@@ -179,11 +175,6 @@ namespace ParkingLotManagement
         private void FloorComboBoxIndexChanged(object sender, EventArgs e)
         {
             UpdateForm(floors.ElementAt(this.floorComboBox.SelectedIndex));
-        }
-
-        private void CloseButtonOnclick(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void addButton_Click(object sender, EventArgs e)

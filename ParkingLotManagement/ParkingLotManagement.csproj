@@ -101,14 +101,14 @@
     <Compile Include="AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Car.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Components\ParkingLot.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\ParkingLot.Designer.cs">
       <DependentUpon>ParkingLot.cs</DependentUpon>
     </Compile>
-    <Compile Include="Floor.cs" />
+    <Compile Include="Models\Floor.cs" />
     <Compile Include="ManageParkingLots.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,10 +121,10 @@
     <Compile Include="ParkingFloors.Designer.cs">
       <DependentUpon>ParkingFloors.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalConstants.cs" />
-    <Compile Include="HourCalculator.cs" />
-    <Compile Include="PriceCalculator.cs" />
-    <Compile Include="DatabaseUtils.cs" />
+    <Compile Include="Helpers\GlobalConstants.cs" />
+    <Compile Include="Helpers\HourCalculator.cs" />
+    <Compile Include="Helpers\PriceCalculator.cs" />
+    <Compile Include="Helpers\DatabaseUtils.cs" />
     <Compile Include="ReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>

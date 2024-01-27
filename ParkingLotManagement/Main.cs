@@ -4,8 +4,6 @@ using System.Data.SQLite;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics;
-using System.Drawing;
 
 
 namespace ParkingLotManagement
@@ -46,11 +44,6 @@ namespace ParkingLotManagement
                 this.floorComboBox.Items.Add(floorItem);
             });
             floorComboBox.SelectedIndex = 0;
-        }
-
-        private void CloseButtonClick(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void AdminLoginClick(object sender, EventArgs e)

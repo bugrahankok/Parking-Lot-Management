@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ParkingLotManagement
@@ -32,11 +25,6 @@ namespace ParkingLotManagement
         {
             ManageParkingLots manageParkingLot = new ManageParkingLots();
             manageParkingLot.Show();
-        }
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void editAdminButton_Click(object sender, EventArgs e)
