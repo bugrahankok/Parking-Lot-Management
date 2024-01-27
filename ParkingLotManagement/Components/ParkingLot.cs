@@ -22,6 +22,7 @@ namespace ParkingLotManagement.Components
         {
             this.lotNameLabel.Text = lotName;
             this.lotDescriptionsButton.Text = String.Join("\n", lotDescriptions);
+            this.lotDescriptionsButton.BackColor = lotDescriptions.Count > 1 ? Color.IndianRed : Color.Green;
         }
     }
 }

@@ -38,7 +38,6 @@
             this.addButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.floorNameInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +48,7 @@
             this.floorComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.floorComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.floorComboBox.FormattingEnabled = true;
-            this.floorComboBox.Location = new System.Drawing.Point(12, 102);
+            this.floorComboBox.Location = new System.Drawing.Point(26, 137);
             this.floorComboBox.Name = "floorComboBox";
             this.floorComboBox.Size = new System.Drawing.Size(195, 24);
             this.floorComboBox.TabIndex = 0;
@@ -59,7 +58,7 @@
             // 
             this.lotCountInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lotCountInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lotCountInput.Location = new System.Drawing.Point(256, 102);
+            this.lotCountInput.Location = new System.Drawing.Point(270, 137);
             this.lotCountInput.Name = "lotCountInput";
             this.lotCountInput.Size = new System.Drawing.Size(146, 23);
             this.lotCountInput.TabIndex = 1;
@@ -71,7 +70,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.saveButton.Location = new System.Drawing.Point(12, 207);
+            this.saveButton.Location = new System.Drawing.Point(26, 242);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 34);
             this.saveButton.TabIndex = 2;
@@ -83,7 +82,7 @@
             // 
             this.hourPriceInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hourPriceInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hourPriceInput.Location = new System.Drawing.Point(256, 159);
+            this.hourPriceInput.Location = new System.Drawing.Point(270, 194);
             this.hourPriceInput.Name = "hourPriceInput";
             this.hourPriceInput.Size = new System.Drawing.Size(146, 23);
             this.hourPriceInput.TabIndex = 4;
@@ -93,7 +92,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(9, 80);
+            this.label1.Location = new System.Drawing.Point(23, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 5;
@@ -104,7 +103,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(253, 80);
+            this.label2.Location = new System.Drawing.Point(267, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 17);
             this.label2.TabIndex = 6;
@@ -115,7 +114,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(253, 138);
+            this.label3.Location = new System.Drawing.Point(267, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 17);
             this.label3.TabIndex = 7;
@@ -125,9 +124,9 @@
             // 
             this.addButton.BackColor = System.Drawing.Color.Maroon;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.addButton.Location = new System.Drawing.Point(147, 12);
+            this.addButton.Location = new System.Drawing.Point(161, 26);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(120, 40);
             this.addButton.TabIndex = 8;
@@ -139,9 +138,9 @@
             // 
             this.editButton.BackColor = System.Drawing.Color.Maroon;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.editButton.Location = new System.Drawing.Point(12, 12);
+            this.editButton.Location = new System.Drawing.Point(26, 26);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(120, 40);
             this.editButton.TabIndex = 9;
@@ -153,9 +152,9 @@
             // 
             this.deleteButton.BackColor = System.Drawing.Color.Maroon;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.deleteButton.Location = new System.Drawing.Point(282, 12);
+            this.deleteButton.Location = new System.Drawing.Point(296, 26);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(120, 40);
             this.deleteButton.TabIndex = 10;
@@ -163,26 +162,11 @@
             this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Red;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.closeButton.Location = new System.Drawing.Point(448, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(34, 24);
-            this.closeButton.TabIndex = 11;
-            this.closeButton.Text = "X";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.CloseButtonOnclick);
-            // 
             // floorNameInput
             // 
             this.floorNameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.floorNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.floorNameInput.Location = new System.Drawing.Point(12, 159);
+            this.floorNameInput.Location = new System.Drawing.Point(26, 194);
             this.floorNameInput.Name = "floorNameInput";
             this.floorNameInput.Size = new System.Drawing.Size(195, 23);
             this.floorNameInput.TabIndex = 12;
@@ -192,7 +176,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(9, 136);
+            this.label4.Location = new System.Drawing.Point(23, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 17);
             this.label4.TabIndex = 13;
@@ -201,9 +185,9 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(0, 64);
+            this.label5.Location = new System.Drawing.Point(0, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(480, 1);
+            this.label5.Size = new System.Drawing.Size(530, 1);
             this.label5.TabIndex = 14;
             // 
             // ManageParkingLots
@@ -211,11 +195,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(480, 257);
+            this.ClientSize = new System.Drawing.Size(447, 306);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.floorNameInput);
-            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
@@ -226,10 +209,10 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.lotCountInput);
             this.Controls.Add(this.floorComboBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ManageParkingLots";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManageParkingLots";
+            this.Text = "Manage Parking Lots";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +230,6 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.TextBox floorNameInput;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

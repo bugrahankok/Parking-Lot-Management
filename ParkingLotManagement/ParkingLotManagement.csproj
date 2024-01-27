@@ -121,12 +121,6 @@
     <Compile Include="ParkingFloors.Designer.cs">
       <DependentUpon>ParkingFloors.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParkingLots.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ParkingLots.Designer.cs">
-      <DependentUpon>ParkingLots.cs</DependentUpon>
-    </Compile>
     <Compile Include="GlobalConstants.cs" />
     <Compile Include="HourCalculator.cs" />
     <Compile Include="PriceCalculator.cs" />
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ParkingFloors.resx">
       <DependentUpon>ParkingFloors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParkingLots.resx">
-      <DependentUpon>ParkingLots.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>

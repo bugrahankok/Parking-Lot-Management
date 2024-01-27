@@ -49,15 +49,25 @@ namespace ParkingLotManagement
                 FlowLayoutPanel flowPanel = new FlowLayoutPanel
                 {
                     AutoScroll = true,
-                    Width = 798,
-                    Height = 420,
-                    BackColor = System.Drawing.Color.FromArgb(1, 43, 43, 43)
+                    Width = 995,
+                    Height = 406,
+                    Dock = DockStyle.Fill,
+                    WrapContents = true,
+                    Padding = new Padding(5, 0, 5, 0)
                 };
                 List<ParkingLot> parkingLots = GenerateLots(floor.getLotCount(), floor.getName());
                 parkingLots.ForEach(parkingLot => { flowPanel.Controls.Add(parkingLot); });
 
-                TabPage tab = new TabPage(floor.getName() + " Floor");
-                tab.BackColor = System.Drawing.Color.FromArgb(1, 43, 43, 43);
+                TabPage tab = new TabPage
+                {
+                    BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43))))),
+                    BorderStyle = BorderStyle.Fixed3D,
+                    Padding = new Padding(3),
+                    Width = 995,
+                    Height = 406,
+                    TabIndex = 0,
+                    Text = "  " + floor.getName() + " Floor  "
+                };
                 tab.Controls.Add(flowPanel);
 
                 floorsTab.TabPages.Add(tab);
@@ -81,10 +91,12 @@ namespace ParkingLotManagement
                     lotDescription.Add(car.getDate());
                 } else
                 {
-                    lotDescription.Add("Available");
+                    lotDescription.Add("AVAILABLE");
                 }
 
                 ParkingLot parkingLot = new ParkingLot(lotName, lotDescription);
+                parkingLot.Width = 180;
+                parkingLot.Height = 145;
                 parkingLots.Add(parkingLot);
             }
             return parkingLots;

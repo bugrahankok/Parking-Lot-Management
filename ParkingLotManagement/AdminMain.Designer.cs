@@ -31,7 +31,6 @@
             this.showParkingLotsButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.manageParkingLotsButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.editAdminButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,21 +79,6 @@
             this.manageParkingLotsButton.UseVisualStyleBackColor = false;
             this.manageParkingLotsButton.Click += new System.EventHandler(this.ManageParkingLotsOnclick);
             // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Red;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.closeButton.Location = new System.Drawing.Point(419, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(34, 24);
-            this.closeButton.TabIndex = 12;
-            this.closeButton.Text = "X";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // editAdminButton
             // 
             this.editAdminButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -115,17 +99,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(452, 291);
+            this.ClientSize = new System.Drawing.Size(452, 308);
             this.Controls.Add(this.editAdminButton);
-            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.manageParkingLotsButton);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.showParkingLotsButton);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AdminMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminMain";
+            this.Text = "Admin Main";
             this.ResumeLayout(false);
 
         }
@@ -135,7 +118,6 @@
         private System.Windows.Forms.Button showParkingLotsButton;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button manageParkingLotsButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button editAdminButton;
     }
 }

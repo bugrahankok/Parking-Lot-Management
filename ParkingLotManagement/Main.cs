@@ -55,9 +55,8 @@ namespace ParkingLotManagement
 
         private void AdminLoginClick(object sender, EventArgs e)
         {
-            new ParkingFloors().Show();
-            //AdminLogin adminLogin = new AdminLogin();
-            //adminLogin.Show();
+            AdminLogin adminLogin = new AdminLogin();
+            adminLogin.Show();
         }
 
 

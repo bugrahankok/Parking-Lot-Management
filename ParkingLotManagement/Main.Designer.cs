@@ -50,7 +50,7 @@
             this.enter_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.enter_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.enter_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enter_btn.Location = new System.Drawing.Point(40, 252);
+            this.enter_btn.Location = new System.Drawing.Point(40, 295);
             this.enter_btn.Margin = new System.Windows.Forms.Padding(2);
             this.enter_btn.Name = "enter_btn";
             this.enter_btn.Size = new System.Drawing.Size(95, 38);
@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 129);
+            this.label1.Location = new System.Drawing.Point(37, 150);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 18);
@@ -74,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 188);
+            this.label4.Location = new System.Drawing.Point(37, 220);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 18);
@@ -85,7 +85,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.pictureBox1.Image = global::ParkingLotManagement.Properties.Resources._299105_lock_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(255, 252);
+            this.pictureBox1.Location = new System.Drawing.Point(255, 295);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(8, 10, 8, 10);
@@ -99,9 +99,9 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Brown;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 36);
+            this.label2.Location = new System.Drawing.Point(36, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 49);
+            this.label2.Size = new System.Drawing.Size(590, 66);
             this.label2.TabIndex = 9;
             this.label2.Text = "ZLOTY CAR PARK";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,18 +109,18 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(341, 129);
+            this.label3.Location = new System.Drawing.Point(341, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1, 161);
+            this.label3.Size = new System.Drawing.Size(1, 184);
             this.label3.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(395, 129);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(395, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 23);
+            this.label5.Size = new System.Drawing.Size(231, 26);
             this.label5.TabIndex = 11;
             this.label5.Text = "PRICE LIST";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,7 @@
             // 
             this.plateTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.plateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plateTextBox.Location = new System.Drawing.Point(40, 151);
+            this.plateTextBox.Location = new System.Drawing.Point(40, 172);
             this.plateTextBox.Name = "plateTextBox";
             this.plateTextBox.Size = new System.Drawing.Size(247, 26);
             this.plateTextBox.TabIndex = 13;
@@ -139,7 +139,7 @@
             this.exit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit_btn.Location = new System.Drawing.Point(149, 252);
+            this.exit_btn.Location = new System.Drawing.Point(149, 295);
             this.exit_btn.Margin = new System.Windows.Forms.Padding(2);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(95, 38);
@@ -153,7 +153,7 @@
             this.floorComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.floorComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.floorComboBox.FormattingEnabled = true;
-            this.floorComboBox.Location = new System.Drawing.Point(40, 209);
+            this.floorComboBox.Location = new System.Drawing.Point(40, 241);
             this.floorComboBox.Name = "floorComboBox";
             this.floorComboBox.Size = new System.Drawing.Size(247, 26);
             this.floorComboBox.TabIndex = 15;
@@ -164,12 +164,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.panel1.Controls.Add(this.priceListLabel);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(395, 151);
+            this.panel1.Location = new System.Drawing.Point(395, 183);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.MaximumSize = new System.Drawing.Size(168, 139);
-            this.panel1.MinimumSize = new System.Drawing.Size(168, 139);
+            this.panel1.MaximumSize = new System.Drawing.Size(265, 150);
+            this.panel1.MinimumSize = new System.Drawing.Size(265, 150);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 139);
+            this.panel1.Size = new System.Drawing.Size(265, 150);
             this.panel1.TabIndex = 16;
             // 
             // priceListLabel
@@ -178,11 +178,11 @@
             this.priceListLabel.ForeColor = System.Drawing.Color.White;
             this.priceListLabel.Location = new System.Drawing.Point(1, 1);
             this.priceListLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.priceListLabel.MaximumSize = new System.Drawing.Size(148, 0);
-            this.priceListLabel.MinimumSize = new System.Drawing.Size(148, 120);
+            this.priceListLabel.MaximumSize = new System.Drawing.Size(228, 0);
+            this.priceListLabel.MinimumSize = new System.Drawing.Size(228, 148);
             this.priceListLabel.Name = "priceListLabel";
             this.priceListLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.priceListLabel.Size = new System.Drawing.Size(148, 120);
+            this.priceListLabel.Size = new System.Drawing.Size(228, 148);
             this.priceListLabel.TabIndex = 0;
             this.priceListLabel.Text = "label6";
             this.priceListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,9 +190,9 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.label6.Location = new System.Drawing.Point(547, 114);
+            this.label6.Location = new System.Drawing.Point(627, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 185);
+            this.label6.Size = new System.Drawing.Size(43, 184);
             this.label6.TabIndex = 17;
             // 
             // Main
@@ -201,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(589, 329);
+            this.ClientSize = new System.Drawing.Size(661, 382);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.floorComboBox);
@@ -215,7 +215,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.enter_btn);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Main";
