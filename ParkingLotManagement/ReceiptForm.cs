@@ -27,12 +27,12 @@ namespace ParkingLotManagement
             receiptBox.AppendText(DASHES + Environment.NewLine);
             receiptBox.AppendText(DASHES + Environment.NewLine);
             receiptBox.AppendText(Environment.NewLine);
-            receiptBox.AppendText($"Plate: \t {initData[3],-24}" + Environment.NewLine);
-            receiptBox.AppendText($"Stayed: \t {initData[0],-24}" + Environment.NewLine);
-            receiptBox.AppendText($"Entrance: \t {initData[2],-24}" + Environment.NewLine);
-            receiptBox.AppendText($"Exit Date: \t {exitDate,-24}" + Environment.NewLine);
-            receiptBox.AppendText($"Price: \t {initData[1],-24}" + Environment.NewLine);
-            receiptBox.AppendText($"Tax ({taxRate * 100}%): \t {taxAmount,-24:F2}" + Environment.NewLine);
+            receiptBox.AppendText($"Plate: \t {initData[3]}" + Environment.NewLine);
+            receiptBox.AppendText($"Stayed: \t {initData[0]}" + Environment.NewLine);
+            receiptBox.AppendText($"Entrance: \t {initData[2]}" + Environment.NewLine);
+            receiptBox.AppendText($"Date: \t {exitDate}" + Environment.NewLine);
+            receiptBox.AppendText($"Price: \t {initData[1]}" + Environment.NewLine);
+            receiptBox.AppendText($"Tax ({taxRate * 100}%): \t {taxAmount}" + Environment.NewLine);
             receiptBox.AppendText(Environment.NewLine);
             receiptBox.AppendText(DASHES + Environment.NewLine);
             receiptBox.AppendText(DASHES + Environment.NewLine);
