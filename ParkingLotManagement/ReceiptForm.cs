@@ -27,12 +27,12 @@ namespace ParkingLotManagement
             receiptBox.AppendText(DASHES + Environment.NewLine);
             receiptBox.AppendText(DASHES + Environment.NewLine);
             receiptBox.AppendText(Environment.NewLine);
-            receiptBox.AppendText($"Plate: \t {initData[3]}" + Environment.NewLine);
-            receiptBox.AppendText($"Stayed: \t {initData[0]}" + Environment.NewLine);
-            receiptBox.AppendText($"Entrance: \t {initData[2]}" + Environment.NewLine);
-            receiptBox.AppendText($"Date: \t {exitDate}" + Environment.NewLine);
-            receiptBox.AppendText($"Price: \t {initData[1]}" + Environment.NewLine);
-            receiptBox.AppendText($"Tax ({taxRate * 100}%): \t {taxAmount}" + Environment.NewLine);
+            receiptBox.AppendText($"Plate:         \t\t{initData[3]}" + Environment.NewLine);
+            receiptBox.AppendText($"Stayed:\t\t\t{initData[0]} Hour(s)" + Environment.NewLine);
+            receiptBox.AppendText($"Entrance:       \t {initData[2]}" + Environment.NewLine);
+            receiptBox.AppendText($"Exit:  \t\t {exitDate}" + Environment.NewLine);
+            receiptBox.AppendText($"Price:         \t\t\t {initData[1]} " + GlobalConstants.POLISH_ZLOTY + Environment.NewLine);
+            receiptBox.AppendText($"Tax ({taxRate * 100}%):\t\t{taxAmount} " + GlobalConstants.POLISH_ZLOTY + Environment.NewLine);
             receiptBox.AppendText(Environment.NewLine);
             receiptBox.AppendText(DASHES + Environment.NewLine);
             receiptBox.AppendText(DASHES + Environment.NewLine);

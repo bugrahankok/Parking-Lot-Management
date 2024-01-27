@@ -37,6 +37,7 @@
             // 
             this.receiptBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.receiptBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.receiptBox.Enabled = false;
             this.receiptBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptBox.Location = new System.Drawing.Point(37, 74);
             this.receiptBox.Margin = new System.Windows.Forms.Padding(2);
