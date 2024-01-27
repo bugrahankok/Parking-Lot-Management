@@ -62,7 +62,7 @@ namespace ParkingLotManagement
 
             if (noAvailableSpace)
             {
-                MessageBox.Show("There is no available lot in the selected floor!", GlobalConstants.APP_TITLE);
+                MessageBox.Show("Unfortunately, there is no available space in the selected floor...", GlobalConstants.APP_TITLE);
             }
          
             if (plate.Trim() == "" || plate.Length <= 5 || floor == "")  
@@ -75,11 +75,11 @@ namespace ParkingLotManagement
                 if (saveResult)
                 {
                     ResetForm();
-                    MessageBox.Show("Car saved!", GlobalConstants.APP_TITLE);
+                    MessageBox.Show("Welcome! Your car is now parked.", GlobalConstants.APP_TITLE);
                 }
                 else
                 {
-                    MessageBox.Show("Car not saved!", GlobalConstants.APP_TITLE);
+                    MessageBox.Show("Opss... Something went wrong!", GlobalConstants.APP_TITLE);
                 }
             }
 
@@ -110,11 +110,11 @@ namespace ParkingLotManagement
                 if (result)
                 {
                     ResetForm();
-                    MessageBox.Show("The car is succesfully exitted!", GlobalConstants.APP_TITLE);
+                    MessageBox.Show("See you later!", GlobalConstants.APP_TITLE);
                 }
                 else
                 {
-                    MessageBox.Show("The car couldn't be exitted!", GlobalConstants.APP_TITLE);
+                    MessageBox.Show("Opss... Something went wrong!", GlobalConstants.APP_TITLE);
                 }
                 
             }
